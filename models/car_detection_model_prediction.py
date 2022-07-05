@@ -48,8 +48,8 @@ def predict(imageBase64Encoded, categ_list):
     preds = get_predictions(out, top=5)
     for pred in preds[0]:
         if pred[0:2] in categ_list:
-            return {"car_detected": "true"}
-    return {"car_detected": "false"}
+            return {"carDetected": "true"}
+    return {"carDetected": "false"}
 
 def detectCarImage(args):
     imageBase64Encoded = args["imageBase64"] 
